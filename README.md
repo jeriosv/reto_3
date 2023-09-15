@@ -1,15 +1,15 @@
 # Reto No. 3: "Entre prima y primo, más me arrimo"
 1. A partir del algoritmo de identificación de los divisores plantear la serie de pasos para determinar los números primos hasta un natural n, usando pseudocódigo y diagramas de flujo.
 
-
+SEUDOCÓDIGO
 
 ```pseudocode
 [variables]
-n : entero
+n : entero (es el n)
 i : entero
 inicio
   i := 2
-  Mientras (i < n) hacer
+  Mientras (i < ((n^0.5)+1) ) hacer      #Haciendo uso de la criba de Heratóstenes, verificamos hasta (n^0.5)+1
     Si modulo(n,i) == 0 entonces
       escribir("i es divisor de n")
     sino
