@@ -5,17 +5,25 @@ SEUDOCÓDIGO
 
 ```pseudocode
 [variables]
-n : entero (es el n)
-i : entero
+n : entero                                          # n es el número natural hasta el que se determinarán los primos
+i : entero                                          # i es un contador para saber si es primo
+j : entero                                          # j es un contador que prueba si ese número es primo
 inicio
-  i := 2
-  Mientras (i < ((n^0.5)+1) ) hacer      #Haciendo uso de la criba de Heratóstenes, verificamos hasta (n^0.5)+1
-    Si modulo(n,i) == 0 entonces
-      escribir("i es divisor de n")
-    sino
-      escribir("i no es divisor de n")
-    i := i + 1
-  Fin mientras
+  j :=2
+  Mientras (j <= n) hacer
+    i := 2
+    Mientras (i < ((n^0.5)+1) ) hacer               # Haciendo uso de la criba de Heratóstenes, verificamos hasta (n^0.5)+1
+      Si modulo(j,i) == 0 entonces
+        escribir("i es divisor de j, j no es primo")
+        salir del ciclo, pues j no es primo y probar con el siguiente (j + 1) 
+      sino
+        escribir("i no es divisor de j")
+      i := i + 1
+    Fin mientras
+    Si ( i > ((n^0.5)+1) )
+       Agregar j a la lista de números primos
+    j := j + 1
+ Fin mientras
 fin
 ```
 
