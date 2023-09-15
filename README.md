@@ -23,6 +23,7 @@ inicio
     Fin mientras
     Si ( i > ((n^0.5)+1) )
        Agregar j a la lista de números primos
+       escribir("j es un número primo")
     j := j + 1
  Fin mientras
 fin
