@@ -16,7 +16,7 @@ inicio
     # Haciendo uso de la criba de Heratóstenes, verificamos hasta (n^0.5)+1
       Si modulo(j,i) == 0 entonces
         escribir("i es divisor de j, j no es primo")
-        salir del ciclo, pues j no es primo y probar con el siguiente (j + 1) 
+        salir del ciclo interno, pues j no es primo y probar con el siguiente (j + 1) 
       sino
         escribir("i no es divisor de j")
       i := i + 1
