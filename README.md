@@ -75,7 +75,7 @@ inicio
 
         # Verificar si la diferencia entre las aproximaciones es menor que la tolerancia
         si    (valor absoluto de(nueva_raiz - raiz) < tolerancia)
-            continuar con la siguiente iteracion
+            salir del ciclo porque llegamos a la tolerancia esperada (break)
 
         raiz = nueva_raiz
      Fin mientras
