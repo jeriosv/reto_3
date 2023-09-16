@@ -6,12 +6,14 @@ Defino las variables iniciales:
   n es el número natural hasta el que se determinarán los primos.
   i es un contador para saber si es primo, haciendo uso de la criba de Heratóstenes, va desde 2 hasta (n^0.5)+1
   j es un contador que prueba si ese número es primo, va desde 2 hasta n
+  lista_primos es la lista en donde serán agregados los números primos.
 
 ```pseudocode
 [variables]
 n : entero    
 i : entero    
-j : entero    
+j : entero
+lista_primos: ()  
 
 inicio
   j :=2
@@ -22,14 +24,14 @@ inicio
     # Haciendo uso de la criba de Heratóstenes, verificamos hasta (n^0.5)+1
       Si modulo(j,i) == 0 entonces
         escribir("i es divisor de j, j no es primo")
-        salir del ciclo interno, pues j no es primo y probar con el siguiente (j + 1) 
+        salir del ciclo interno, pues j no es primo y probar con el siguiente número (j + 1) 
       sino
         escribir("i no es divisor de j")
       i := i + 1
     Fin mientras
 
     Si ( i > ((n^0.5)+1) )
-       Agregar j a la lista de números primos
+       Agregar j a la lista de números primos lista_primos
        escribir("j es un número primo")
     j := j + 1
  Fin mientras
