@@ -1,7 +1,7 @@
 # Reto No. 3: "Entre prima y primo, más me arrimo"
 1. A partir del algoritmo de identificación de los divisores plantear la serie de pasos para determinar los números primos hasta un natural n, usando pseudocódigo y diagramas de flujo.
 
-##SEUDOCÓDIGO: 
+## SEUDOCÓDIGO: 
 Defino las variables iniciales:
  - n es el número natural hasta el que se determinarán los primos.
  - i es un contador para saber si es primo, haciendo uso de la criba de Heratóstenes, va desde 2 hasta (n^0.5)+1
