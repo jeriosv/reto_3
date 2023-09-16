@@ -1,8 +1,8 @@
 # Reto No. 3: "Entre prima y primo, más me arrimo"
 1.  A partir del algoritmo de identificación de los divisores plantear la serie de pasos para determinar los números primos hasta un natural n, usando pseudocódigo y diagramas de flujo.
 
-## SEUDOCÓDIGO: 
-Defino las variables iniciales:
+## Números Primos hasta n: 
+Para el seudocódigo defino las variables iniciales:
  - numero es el número natural hasta el que se determinarán los primos.
  - i es un contador para saber si es primo, haciendo uso de la criba de Heratóstenes, va desde 2 hasta (numero^0.5)+1
  - j es un contador que prueba si ese número es primo, va desde 2 hasta n
@@ -47,6 +47,13 @@ Para calcular una aproximación de la raíz cuadrada de un número utilizando di
 
 Comenzamos con una suposición inicial igual al número que queremos calcular. Luego en cada iteración, calculamos una nueva aproximación de la raíz cuadrada dividiendo y restando, y comparamos la diferencia entre las aproximaciones con una tolerancia para decidir si detener las iteraciones. Cuantas más iteraciones realices, mayor será la precisión de la aproximación.
 
+## Cálculo de la raíz cuadrada de un número: 
+Para el seudocódigo defino las variables iniciales:
+ - numero es el número real al que se le aproximará su raíz cuadrada
+ - iteraciones es un número natural grande, supongo hacer 1000
+ - tolerancia es un número real pequeño, lo defino como el 0,01% del numero
+ - raiz es un número real resultado
+
 ```pseudocode
 [variables]
 numero : real
@@ -54,10 +61,9 @@ iteraciones : entero
 tolerancia  : real
 raiz : real 
 
-
 inicio
     iteraciones := 1000
-    tolerancia := 0,0001 * n
+    tolerancia := 0,0001 * numero
     # Suposición inicial (cualquier valor positivo)
     raiz = numero
 
