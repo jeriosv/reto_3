@@ -5,25 +5,25 @@
 1.  A partir del algoritmo de identificación de los divisores plantear la serie de pasos para determinar los números primos hasta un natural n, usando pseudocódigo y diagramas de flujo.
 
 Para el seudocódigo defino las variables iniciales:
- - numero es el número natural hasta el que se determinarán los primos.
- - i es un contador para saber si es primo, haciendo uso de la criba de Heratóstenes, va desde 2 hasta (numero^0.5)+1
+ - n es el número natural hasta el que se determinarán los primos.
+ - i es un contador para saber si es primo, haciendo uso de la criba de Heratóstenes, va desde 2 hasta (n^0.5)+1
  - j es un contador que prueba si ese número es primo, va desde 2 hasta n
  - lista_primos es la lista en donde serán agregados los números primos.
 
 ```pseudocode
 [variables]
-numero : entero    
+n : entero    
 i : entero    
 j : entero
 lista_primos: ()  
 
 inicio
   j :=2
-  Mientras (j <= numero) hacer
+  Mientras (j <= n) hacer
      i := 2
  
-     Mientras (i < ((numero^0.5)+1) ) hacer
-     # Haciendo uso de la criba de Heratóstenes, verificamos hasta (numero^0.5)+1
+     Mientras (i < ((n^0.5)+1) ) hacer
+     # Haciendo uso de la criba de Heratóstenes, verificamos hasta (n^0.5)+1
         Si modulo(j,i) == 0 entonces
            escribir("i es divisor de j, j no es primo")
            salir del ciclo interno, pues j no es primo y probar con el siguiente número (j + 1) 
@@ -32,14 +32,14 @@ inicio
         i := i + 1
      Fin mientras
 
-     Si ( i > ((numero^0.5)+1) )
+     Si ( i > ((n^0.5)+1) )
          Agregar j a la lista de números primos lista_primos
          escribir("j es un número primo")
      j := j + 1
  Fin mientras
 fin
 ```
-
+![image](https://github.com/jeriosv/reto_3/assets/142249529/956888ce-8a90-48e0-a2ac-eadf86893913)
 
 ## Cálculo de la raíz cuadrada de un número: 
 
